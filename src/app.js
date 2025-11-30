@@ -13,6 +13,9 @@ app.use(express.json());
 connectDB();
 
 // Routes
+app.get('/', (req, res) =>{
+    res.send("Welcome to meocup")
+})
 app.use('/api/users', require('./routes/user.routes'));
 
 module.exports = app;
